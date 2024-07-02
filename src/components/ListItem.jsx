@@ -1,6 +1,6 @@
 import { FaTrashAlt } from "react-icons/fa";
 
-const LineItem = ({ item }) => {
+const ListItem = ({ item }) => {
   return (
     <li className='item'>
       <input type='checkbox' />
@@ -20,4 +20,4 @@ const LineItem = ({ item }) => {
   );
 };
 
-export default LineItem;
+export default ListItem;
