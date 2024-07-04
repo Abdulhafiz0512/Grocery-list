@@ -9,6 +9,11 @@
       "id": "2",
       "item": "Milk",
       "checked": true
+    },
+    {
+      "id": 1720091553482,
+      "item": "new item",
+      "checked": false
     }
   ]
 }
