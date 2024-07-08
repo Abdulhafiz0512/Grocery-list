@@ -13,7 +13,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [fetchError, setFetchError] = useState(null);
 
-  const api_url = "http://localhost:3000";
+  const api_url = "https://posts-server-1.onrender.com";
   useEffect(() => {
     async function fetchItems() {
       try {
