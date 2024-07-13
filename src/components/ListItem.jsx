@@ -6,7 +6,7 @@ const ListItem = ({ item, handleDelete, handleCheck }) => {
       <input type='checkbox' checked={item.checked} onChange={() => handleCheck(item.id)} />
       <label
         style={item.checked ? { textDecoration: "line-through" } : null}
-        onDoubleClick={() => {}}
+        onDoubleClick={() => handleCheck(item.id)}
       >
         {item.item}
       </label>

@@ -12,7 +12,7 @@ function App() {
   const [newItem, setNewItem] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [fetchError, setFetchError] = useState(null);
-
+  const [isUpdating, setIsUpdating] = useState(false)
   const api_url = "http://localhost:3000";
   useEffect(() => {
     async function fetchItems() {
@@ -92,6 +92,7 @@ function App() {
   }
 
   async function handleCheck(id) {
+    setIsUpdating(true)
     try {
       const updatedItem = items.find((item) => item.id === id);
       if (!updatedItem) throw new Error("Updated item not found");
@@ -114,8 +115,11 @@ function App() {
       );
       setItems(updatedItems);
     } catch (error) {
-      console.error("Error updaeting item", error.message);
+      console.error("Error updating item", error.message);
       setFetchError(error.message);
+    }
+    finally{
+      setIsUpdating(false)
     }
   }
 
@@ -136,6 +140,7 @@ function App() {
       <SearchItem search={search} onSearch={setSearch} />
       <main>
         {isLoading && <p>Loading...</p>}
+        {isUpdating && <p>Updating...</p>}
         {fetchError && <p style={{ color: "red" }}>{fetchError}</p>}
         {!isLoading && !fetchError && (
           <Content

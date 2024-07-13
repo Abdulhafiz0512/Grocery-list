@@ -3,7 +3,7 @@
     {
       "id": "1",
       "item": "Bread",
-      "checked": false
+      "checked": true
     },
     {
       "id": "2",
@@ -11,13 +11,13 @@
       "checked": true
     },
     {
-      "id": "1720091553482",
-      "item": "new item",
+      "id": "1720709219026",
+      "item": "Sugar",
       "checked": false
     },
     {
-      "id": "1720654256185",
-      "item": "cmsclm",
+      "id": "1720709227197",
+      "item": "Water",
       "checked": false
     }
   ]
